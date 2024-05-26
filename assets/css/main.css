@@ -1,0 +1,343 @@
+/* Nguyên tắc làm vào
+Từ ngoài vào trong
+Từ trên xuống dưới 
+Từ tổng quan đến chi tiết */
+
+
+/* Các câu hỏi trước khi css 
+1. Vị Trí
+2. Kích thước (wight height)
+3. Màu sắc
+4. Kiểu Dáng
+ */
+
+/* Phan header + navbar */
+#header{
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1;
+ 
+}
+.logo {
+    display: inline-flex;
+    align-items: center;
+    height: 70px;
+}
+.logo-img{
+    display: flex;
+    margin: 14px 0px;
+}
+.logo p {
+    display: block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#nav{
+    display: inline-flex;
+    align-items: center;
+    height: 70px;
+    float: right;
+}
+#nav >li {
+    display: inline-block;
+}
+#nav li {
+    align-items: center;
+    position: relative;
+}
+#nav > li > a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    padding: 0 18px ;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 46px;
+    display: block;
+}
+#subnav li{
+    width: 100%;
+}
+#subnav li a{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 46px;
+    display: block;
+    text-decoration: none;
+}
+
+#nav li:hover #subnav {
+    display: block;
+}
+#nav #subnav{
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.3);
+    
+}
+#nav #subnav a{
+    color: #000;
+    padding-left: 12px;
+    padding-right: 56px;
+    line-height: 38px;
+}
+
+.nav-item__more .subnav:hover{
+    display: block;
+}
+.subnav li a {
+    color: black;
+}
+.nav-icon__down{
+    font-weight: 100;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
+#header .search-button{
+    color: #fff;
+    font-size: 15px;
+    float: right;
+    line-height: 46px;
+    padding: 0 21px;
+  
+}
+#header .mobile-menu-btn:hover,
+#header .search-button:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+/* Phan anh slider */
+#slider{
+    padding-top: 50%;
+    background: url('https://tipohouse.com/assets/background/header-background.jpeg') top center / cover no-repeat;
+    /* background : img / position / size / repeat */
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.6);
+    
+}
+.slider-text{
+    position: absolute;
+    bottom: 48px;
+    color: #fff;
+    padding: 32px 16px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 3px #333;
+}
+.slider-text__heading{
+    margin: 10px 0;
+    line-height: 36px;
+    font-size: 1.4rem;
+}
+.slider-text-description{
+    margin: 15px 0;
+    font-size: 1rem;
+}
+/* Container-icon */
+.container-icon{
+    display: inline-flex;
+}
+
+/* Phan About */
+#content .container{
+    width: 800px;
+    margin: 0 auto ;
+    padding: 64px 0 112px;
+
+}
+#content .container-heading{
+    margin: 10px 0;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 5px;
+}
+#content .container-sub-heading{
+    text-align: center;
+    font-weight: 100;
+    color: #828282;
+    margin: 15px 0;
+    font-style: italic;
+}
+#content .container-about{
+    margin: 10px 0;
+    line-height: 1.6rem;
+    text-align: justify;
+}
+#content .members-list{
+    margin-top: 48px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#content .members-item p {
+    margin: 15px 0;
+}
+#content .members-img {
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+/* Phan Tour */
+#content .container-tour{
+    background-color: #000;
+}
+.ticket-date{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.ticket-date li {
+    color: #757575;
+    list-style: none;
+    border-bottom: 1px solid #dddddd;
+    padding: 11px 16px;
+    font-size: 15px;
+}
+.ticket-date .sold-out {
+    background-color: rgb(244, 67, 54);
+    padding: 4px 8px;
+    margin-left: 16px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 15px;
+}
+.ticket-date  .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+}
+/* Ticket place */
+.ticket-item{
+    margin-top: 32px;
+    margin-bottom: 48px;
+    overflow: hidden;
+}
+
+.ticket-img{
+    width: 100%;
+    display: block;
+}
+.ticket-img:hover{
+    opacity: 0.6;
+}
+.ticket-text{
+    padding: 0 16px ;
+    background-color: #fff;
+}
+.ticket-text h3 {
+    padding: 15px 0;
+    font-size: 15px;
+}
+.ticket-text span {
+    opacity: 0.6;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.ticket-text p{
+    margin: 15px 0;
+    font-size: 15px;
+}
+.ticket-list .btn-buy{
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 15px;
+}
+.btn-buy:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* Contact cua band */
+.contact-band{
+    padding: 32px;
+}
+.band-info{
+    list-style: none;
+}
+.band-info i {
+    margin: 4px 0;
+}
+.contact-input{
+    font-size: 15px;
+    overflow: hidden;
+}
+.contact-input div[class="row"]{
+    margin-top: 8px;
+}
+.input-name{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.input-email{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.input-message{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.btn-send{
+    padding: 8px 16px; 
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    float: inline-end;
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+.btn-send:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+/* Map */
+.container-map img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+/* Footer */
+#footer{
+    background-color: #f7f7f734;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    padding: 64px 16px;
+    opacity: 0.6;    
+}
+#footer .footer-icon:hover{
+    cursor: pointer;
+    opacity: 0.3;
+}
+#footer p {
+    margin-top: 30px;
+}
+#footer p a {
+    color: rgb(0, 0, 0,0.8);
+}
+.fa-brands{
+    font-size: 22px;
+}
